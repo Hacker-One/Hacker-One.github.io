@@ -1,1 +1,7 @@
 test
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$.getJSON("https://passport.wanmei.com/sso/login?service=wmshop&jsonpCallback=aaaa", function(data){
+	alert(JSON.stringify(data));
+	});
+</script>
